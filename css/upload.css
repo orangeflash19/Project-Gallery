@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+form{
+    background-color: #0c0c0cf7;
+    height: 1200px;
+    padding: 20px 0px;
+    margin: 0;
+}
+
+form label, input, textarea{
+    margin: 15px;
+    
+}
+
+form input, textarea{
+    border: 1px solid #262626;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    width: 40%;
+    padding: 5px 10px;
+}
+form input::placeholder{
+    text-align: center;
+    padding: 5px;
+}
+form textarea::placeholder{
+    text-align: center;
+    padding: 5px;
+}
+
+input{
+    position: relative;
+    left: 20%;
+}
+#title{
+    left: 18%;
+}
+#upload{
+    left: 19%;
+    border: none;
+}
+input[type="submit"]{
+    left: 32%;
+    background-color: firebrick;
+    color: #fff;
+    border: none;
+}
+textarea{
+    position: relative;
+    left: 15%;
+}
+label,h5{
+    font-size: 20px;
+    color: blue;
+    position: relative;
+    left: 12%;
+}
+
+footer{
+    transform: translate(0,410%);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PROJECTS</title>
+    <link rel="stylesheet" href="css/homepage.css" type="text/css">
+    <link rel="stylesheet" href="css/project.css" type="text/css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <img src="img/pblogo.jpg" alt="logo" class="logo">
+
+        <div id="menuicon">
+            <div id="menuline"></div>
+        </div>
+        <div id="mainmenu">
+
+            <img src="img/pblogo.jpg" alt="logo" class="logo">
+            <ul class="menu">
+                <li><a href="homepage.html" data-text="Home">Home</a></li>
+                <li><a href="#" data-text="Projects">Projects</a></li>
+                <li><a href="about.html" data-text="about us">about us</a></li>
+                <li><a href="contact.html" data-text="contact us">contact us</a></li>
+            </ul>
+            <div id="close"><img src="img/close.png" alt="close"></div>
+        </div>
+
+    </header>
+
+    <div class="catList">
+        <ul>
+            <li>All Projects</li>
+            <li>2nd Year</li>
+            <li>3rd Year</li>
+            <li>4th Year</li>
+        </ul>
+    </div>
+
+  <table>
+      <tr id="boxrow">
+          <td>
+              <div class="boxandbtn">
+    <div class="projectBox"> <a href="projectdetail.html"></a></div>
+    <button class="call_modal" style="cursor:pointer;">Details</button>
+              </div></td>
+      <td>
+    <div class="boxandbtn">
+    <div class="projectBox"> </div>
+    <button class="call_modal" style="cursor:pointer;">Details</button>
+    </div>
+          </td>
+      </tr>
+  </table>
+   
+
+        <div class="modal">
+            <div class="modal_close close"></div>
+            <div class="modal_main">
+                <img src="img/close2.png" class="close" style="margin-top:13px;left:96%;position:fixed;">
+                <h1>Project title</h1>
+                <br><br>
+                <h2>Project description</h2><br><br>
+                <p>Project details</p>
+                <div>
+                    <table class="group">
+                        <th>Members</th>
+                        <tr>
+                            <td>member1</td>
+                            <td>member2</td>
+                            <td>member3</td>
+                        </tr>
+                        <tr>
+                            <td>email 1</td>
+                            <td>email 2</td>
+                            <td>email 3</td>
+                        </tr>
+
+                    </table>
+                    <table class="screenshot">
+                        <tr>
+                            <td><img src="https://picsum.photos/200/200/?random"></td>
+                            <td><img src="https://picsum.photos/200/200/?random"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://picsum.photos/200/200/?random"></td>
+                            <td><img src="https://picsum.photos/200/200/?random"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://picsum.photos/200/200/?random"></td>
+                            <td><img src="https://picsum.photos/200/200/?random"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    
+    
+    <footer>
+        <h1>&copy; PROJECT GALLERY</h1>
+
+    </footer>
+</body>
+
+</html>

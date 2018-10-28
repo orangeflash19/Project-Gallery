@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #262626;
+}
+.logo{
+    margin: 0;
+}
+.catList{
+    position: absolute;
+    left: 30%;
+}
+.category li{
+    float: left;
+    padding: 5px;
+    margin: 5px 15px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+}
+.category li:hover{
+    border-bottom: 3px solid #fff;
+    transition: 0.2s;
+}
+
+.projectbox{
+    height: 500px;
+    width: 500px;
+   
+    margin: 0 15px;
+}
+.projectTable tr{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+img{
+    margin: 15px;
+}

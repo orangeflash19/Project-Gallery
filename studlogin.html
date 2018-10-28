@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="css/homepage.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+   <script type="text/javascript" src="js/jquery.js"></script>
+   <script type="text/javascript" src="js/homepage.js"></script>
+    </head>
+    <body>
+          <header>
+      
+       <img src="img/pblogo.jpg" alt="logo" class="logo">
+      
+       <div id="menuicon"> <div id="menuline"></div></div>
+       <div id="mainmenu">
+      
+       <img src="img/pblogo.jpg" alt="logo" class="logo">
+       <ul class="menu">
+           <li><a href="homepage.html" data-text="Home">Home</a></li>
+           <li><a href="#" data-text="Projects">Projects</a></li>
+           <li><a href="about.html" data-text="about us">about us</a></li>
+           <li><a href="contact.html" data-text="contact us">contact us</a></li>
+           </ul>
+            <div id="close"><img src="img/close.png" alt="close"></div>
+         </div>
+     
+   </header>
+        <div class="loginbox">
+            <img src="img/av.jpg" class="avatar">
+            <h1 id="l">Welcome Agnelite</h1>
+            <form action="studlogin.php" method="post">
+                <p>Roll Number</p>
+                <input type="text" name="roll" placeholder="Enter Roll Number">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter password">
+                <input type="submit" name="login" value="LOGIN">
+                <a href="#" >Lost your password?</a><br>
+                <a href="#" >Don't have an account?</a>
+            </form>
+        </div>
+    
+        <footer>
+        <h1>&copy; PROJECT GALLERY</h1>
+        
+    </footer>
+    </body>
+</html>

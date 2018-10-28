@@ -1,0 +1,27 @@
+#random-bg{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    transition: 3600s;
+   
+}
+
+footer{
+    position: relative;
+    bottom: -100%;
+   
+}
+
+.shot{
+    height: 400px;
+    width: 400px;
+    margin: 20px;
+}
+
+#title{
+    text-align: center;
+    margin: 20px;
+}
+section{
+     text-align: center;
+}

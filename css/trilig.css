@@ -1,0 +1,66 @@
+body{
+     margin: 0;
+    padding: 0;
+    background: url(../img/loginoff.jpg) no-repeat;
+    size: cover;
+    position: center;
+}
+img{
+
+    float: left;
+    /*position: absolute;*/
+    border-radius: 50%;
+}
+.admin{
+    position: absolute;
+    top: 25%;
+    right: 13%;
+}
+.stud{
+    position: absolute;
+    top: 25%;
+    left: 13%;
+}
+.faculty{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+input[type="button"]{
+    position: absolute;
+    top: 70%;
+    padding: 0;
+    border: 0;
+    height: 60px;
+    width: 200px;
+    font-size: 25px;
+    font-family: monospace;
+    background-color: black;
+    color: crimson;
+    
+}
+input[type="button"]:hover{
+    background-color: white;
+    font-size: 20px;
+    transition: 0.8s;
+}
+#ad{
+    right: 14%;
+}
+#stud{
+    left: 14%;
+}
+#fac{
+    left: 41%;
+}
+
+.studbox, .facbox, .adminbox{
+    z-index: -10
+}
+
+footer{
+    position: absolute;
+    top: 66vh;
+    width: 100%;
+    height: 45px;
+}
