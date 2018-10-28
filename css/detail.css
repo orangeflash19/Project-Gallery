@@ -25,3 +25,9 @@ footer{
 section{
      text-align: center;
 }
+
+@media only screen and (max-width: 400px){
+    td{
+        width: 90%;
+    }
+}

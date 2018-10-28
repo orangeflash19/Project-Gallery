@@ -161,3 +161,12 @@ a{
     text-align: center;
     color: crimson;
 }
+
+@media only screen and (min-width:200px){
+    footer{
+        width: 98%;
+    }
+    header{
+        width: 100%;
+    }
+}

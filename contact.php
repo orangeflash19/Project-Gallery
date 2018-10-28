@@ -2,22 +2,9 @@
 include "includes/db.php";
 include "includes/functions.php";
 
+$result = "";
 if(isset($_POST['csubmit'])){
-    $fname = $_POST['fname'];
-    $email = $_POST['email'];
-    $mesg = $_POST['mesg'];
-    
-    $fname = mysqli_real_escape_string($connection, $fname);
-    $email = mysqli_real_escape_string($connection, $email);
-    $mesg = mysqli_real_escape_string($connection, $mesg);
-    
-    $query = "INSERT INTO contact (id, full_name, email, message) VALUES('','$fname','$email','$mesg')";
-    $result = mysqli_query($connection, $query);
-    if($result){
-        echo '<script>alert("Thank you for your feedback");</script>';
-    }else{
-        die("query Failed" . mysqli_error($connection));
-    }
+contactForm();
 }
 ?>
 
@@ -88,11 +75,11 @@ if(isset($_POST['csubmit'])){
         </form>
     </div>
     <div class="mapwrapper">
-     <div class="MAP">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.1547546856166!2d72.992872017905!3d19.07555815426853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6cae0d8c5ab%3A0xbbf4481d662ca2d8!2sFr.+C.+Rodrigues+Institute+of+Technology!5e0!3m2!1sen!2sin!4v1535193529007" width="800px" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="MAP">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.1547546856166!2d72.992872017905!3d19.07555815426853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6cae0d8c5ab%3A0xbbf4481d662ca2d8!2sFr.+C.+Rodrigues+Institute+of+Technology!5e0!3m2!1sen!2sin!4v1535193529007" width="800px" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        </div>
-        
+    </div>
+
     <footer>
         <h1>&copy; PROJECT GALLERY</h1>
     </footer>

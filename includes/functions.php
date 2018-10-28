@@ -145,13 +145,40 @@ function changePassword(){
     $email = mysqli_real_escape_string($connection, $email);
     $password = mysqli_real_escape_string($connection, $password);
     
+    require "PHPMailer/PHPMailerAutoload.php";
+    $mail = new PHPMailer();
+    /*$mail->SMTPDebug = 4;*/
+    $mail->isSMTP();
+    $mail->SMTPSecure = "tls";
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = 587;
+    $mail->SMTPAuth = true;
+    
+    $mail->Username = "rentaros80@gmail.com";
+    $mail->Password = "satomiren";
+    
+    $mail->setFrom($email);
+    $mail->addAddress("bhosaleranveer99@gmail.com");
+    $mail->addReplyTo($email);
+    
+    $mail->isHTML(true);
+    $mail->Subject = "Password Change";
+    $mail->Body = 'Your Password has been updated.';
+    
+    if(!$mail->send()) {
+    echo '<script>alert("Message could not be sent.");</script>';
+    /*echo 'Mailer Error: ' . $mail->ErrorInfo;*/
+    } else {
+    echo '<script>alert("Message has been sent");</script>';
+    }
+    
     $query = "UPDATE users SET password = '$password' WHERE email = '$email'";
     $result = mysqli_query($connection, $query);
     if($result){
         echo "<script>alert('Password has been changed successfully.');</script>";
     }else{
         die("query failed" . mysqli_error($connection));
-    }
+    }   
     
 /*//SMTP 
 ini_set("SMTP","smtp.gmail.com" ); 
@@ -165,5 +192,53 @@ $msg = wordwrap($msg,70);
 $headers = "From: pgallery@gamil.com";    
 // send email
 mail($email,"Confirmation Email from Project Gallery!",$msg,$headers);*/
+}
+
+function contactForm(){
+    global $connection;
+        
+    $fname = $_POST['fname'];
+    $email = $_POST['email'];
+    $mesg = $_POST['mesg'];
+    
+    $fname = mysqli_real_escape_string($connection, $fname);
+    $email = mysqli_real_escape_string($connection, $email);
+    $mesg = mysqli_real_escape_string($connection, $mesg);
+    
+    require "PHPMailer/PHPMailerAutoload.php";
+    $mail = new PHPMailer();
+    /*$mail->SMTPDebug = 4;*/
+    $mail->isSMTP();
+    $mail->SMTPSecure = "tls";
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = 587;
+    $mail->SMTPAuth = true;
+    
+    $mail->Username = "rentaros80@gmail.com";
+    $mail->Password = "satomiren";
+    
+    $mail->setFrom($email, $fname);
+    $mail->addAddress("bhosaleranveer99@gmail.com");
+    $mail->addReplyTo($email, $fname);
+    
+    $mail->isHTML(true);
+    $mail->Subject = "Contact Form feed";
+    $mail->Body = "Form Submission:" . "<br><br>" . $mesg . "<br><br>" . $fname . "<br><br>" . $email;
+    
+    if(!$mail->send()) {
+    echo '<script>alert("Message could not be sent.");</script>';
+    /*echo 'Mailer Error: ' . $mail->ErrorInfo;*/
+    } else {
+    echo '<script>alert("Message has been sent");</script>';
+    }
+    
+    
+    $query = "INSERT INTO contact (id, full_name, email, message) VALUES('','$fname','$email','$mesg')";
+    $result = mysqli_query($connection, $query);
+    if($result){
+        echo '<script>alert("Thank you for your feedback");</script>';
+    }else{
+        die("query Failed" . mysqli_error($connection));
+    }
 }
 ?>

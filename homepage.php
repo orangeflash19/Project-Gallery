@@ -31,7 +31,11 @@
             </ul>
             <div id="close"><img src="img/close.png" alt="close"></div>
             <br><br>
-            <h3 style="text-align: center; color: #fff;"><?php echo $name = $_SESSION['username']; ?></h3> 
+            <?php if(isset($_SESSION['username'])){?> 
+            <h3 style="text-align: center; color: #fff;">
+                <?php echo $name = $_SESSION['username']; ?>
+            </h3>
+            <?php } ?>
             <!--<button type="button"><a href="logout.php" style="color: #fff;">LOG OUT</a></button>-->
         </div>
 
@@ -42,7 +46,7 @@
     </video>
     <div class="msg">
         <h1>DON'T LEARN TO CODE LEARN TO CREATE!!</h1><br><br>
-        
+
         <?php
         if(isset($_SESSION['username'])){
        echo ' <a href="logout.php" class="btnlog">LOGOUT</a>';
@@ -51,7 +55,7 @@
               echo ' <a href="loginj.php" class="btnlog">LOGIN</a>';
         }
             ?>
-        
+
     </div>
 
     <!--<div id="box1">

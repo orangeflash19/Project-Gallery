@@ -115,7 +115,7 @@ return false;
                 </tr>
                 <tr>
                     <td align="center">
-                        <input type="submit" name="login" value="LOGIN" id="signInBtn" onclick="ValidateEmail(document.loginform.email);"/>
+                        <input type="submit" name="login" value="LOGIN" id="signInBtn" onclick="ValidateEmail(document.loginform.email);" />
                     </td>
                 </tr>
                 <tr>
